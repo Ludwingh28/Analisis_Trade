@@ -483,6 +483,7 @@ write_sheet("ReposicionxRuta", hoja1)
 write_sheet("ReposicionxCliente", hoja2)
 write_sheet("ClientesSinReposicion", hoja3)
 
-OUT = BASE + r"\Analisis_TradeMarketing.xlsx"
+timestamp = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+OUT = BASE + rf"\SC_Analisis_TradeMarketing_{timestamp}.xlsx"
 wb.save(OUT)
 print("Guardado:", OUT)
